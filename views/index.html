@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TeamPush</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+		<div id="container">
+			<div id="sidebar">
+				<div id="logo"></div>
+				<a id="github-link" target="_blank" href="https://github.com/inspire-0905/TeamPush">V0.1 @Github Code</a>
+			</div>
+			<div id="right-bg">
+				<div class="big-circle"></div>
+			</div>
+			<div id="right-container">
+				<div class="user">
+					<div class="user-name">{{#if user_name}}{{user_name}}{{else}}<a>欢迎</a>{{/if}}</div>
+					<div class="user-icon"></div>
+				</div>
+				<ul class="right-info">
+					<li>关注感兴趣的圈子，</li>
+					<li>我们将自动把内容推送到您的<a class="pocket-link" target="_blank" href="http://getpocket.com/">Pocket</a></li>
+					<li class="comment">利用闲暇时间在移动设备上继续阅读。</li>
+					<li class="comment"><a class="help-link" target="_blank" href="/help">———— 了解详情</a></li>
+				</ul>
+				<ul id="circle-list">
+					{{#each circles}}
+						<li class="circle-item" data-tag="{{circle_tag}}" data-state="{{#if circle_joined}}joined{{/if}}">
+							<div class="circle-bg {{#if circle_joined}}joined{{/if}}"></div>
+							<div class="circle-cover {{#if circle_joined}}joined{{/if}}">
+								<div class="circle-join">{{#if circle_joined}}退出圈子{{else}}加入圈子{{/if}}</div>
+								<div class="circle-cover-tip">{{#if circle_joined}}为文章添加 <b>{{circle_tag}}</b> 标签分享到这{{else}}加入该圈子订阅或分享感兴趣的文章{{/if}}</div>
+							</div>
+							<image class="circle-avatar" src="./imgs/circle/{{circle_tag}}.png"></image>
+							<div class="circle-info">
+								<div class="circle-description">{{circle_description}}</div>
+								<div class="circle-name">{{circle_name}} // <span class="circle-follow-num">{{circle_members.length}}关注</span></div>
+							</div>
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</html>

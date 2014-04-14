@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>欢迎加入TeamPush</title>
+		<style type="text/css">
+			body, html {
+				margin: 0;
+				font-family: "Monaco","Consolas","Ubuntu Mono", 微软雅黑, 黑体, monospace;
+				color: #fff;
+			}
+			body {
+				background-color: #240828;
+			}
+			body article {
+				font-size: 28px;
+				text-align: center;
+				position: absolute;
+				top: 45%;
+				width: 100%;
+			}
+			body .tip {
+				opacity: 0.3;
+				font-size: 20px;
+			}
+			body a {
+				color: #ff4800;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<article>
+			<p>授权完成，我们已向您的<a class="pocket-link" target="_blank" href="http://getpocket.com/">Pocket</a>账户推送了一篇文章，请使用<a class="pocket-link" target="_blank" href="http://getpocket.com/">Pocket</a>客户端确认。<a class="pocket-link" target="_blank" href="/help">了解详情</a></p>
+			<p class="tip">10秒后返回主页</p>
+		</article>
+	</body>
+	<script type="text/javascript">
+		setTimeout(function() {
+			document.location.replace('/');
+		}, 10000);
+	</script>
+</html>
