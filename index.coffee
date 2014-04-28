@@ -24,5 +24,4 @@ app.get '/help', model.helpPage
 app.post '/joinCircle', model.joinCircle
 app.post '/quitCircle', model.quitCircle
 
-
 app.listen(config.server_port)
